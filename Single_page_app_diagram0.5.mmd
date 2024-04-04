@@ -21,8 +21,5 @@ sequenceDiagram
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{
-        "content": "not so new note",
-        "date": "2024-04-04T08:47:22.857Z"
-    }, ... ]
+    server-->>browser: [{"content": "not so new note","date": "2024-04-04T08:47:22.857Z"}, ... ]
     deactivate server
