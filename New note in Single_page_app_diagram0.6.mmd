@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note left of browser: event handler triggered 
+    Note left of browser: GET request prevented 
+    Note left of browser: new note added to notes
+    Note left of browser: note list re-rendered
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    Note right of browser: JSON data sent to server
+    Note right of server: JSON note added
+
+    server-->>browser: 201 created response
+    deactivate server
+
+    
